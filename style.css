@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fullscreen Container */
+.container {
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fed9c8;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    background-color: #ff9156;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1 1 auto; /* Responsive resizing */
+    min-width: 150px; /* Ensures proper width on smaller screens */
+}
+
+button {
+    background-color: #f06a23;
+    color: white;
+    cursor: pointer;
+    border: none;
+    flex: 0 0 auto;
+}
+
+button:hover {
+    background-color: #d64b00;
+}
+
+/* Loader Styling */
+#loader {
+    text-align: center;
+    font-size: 1.2em;
+    color: #9d3a05;
+}
+
+/* News Results Styling */
+#newsResults {
+    flex: 1; /* Fills available space */
+    overflow-y: auto; /* Enables scrolling if content exceeds height */
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.news-item {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.news-item img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.news-item h3 {
+    margin: 0;
+}
+
+.news-item p {
+    margin: 5px 0;
+}
+
+.news-item a {
+    color: #9d3a05;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Pagination Styling */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, select, button {
+        flex: none;
+        width: 100%;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-item img {
+        max-width: 80%;
+        max-height: auto;
+    }
+}
+
